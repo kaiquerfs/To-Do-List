@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - AWS_REGION=us-east-1
+      - DYNAMODB_TABLE=Todos
+      - S3_BUCKET_NAME=your-s3-bucket-name
+      - SQS_QUEUE_URL=your-sqs-queue-url
+      - FLASK_APP=app
+      - FLASK_ENV=development
