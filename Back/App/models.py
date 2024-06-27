@@ -3,11 +3,12 @@ from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
 import os
 
-# Configuração do DynamoDB
+#--------------- Configuração do DynamoDB ---------------
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  # Substitua pelo seu AWS_REGION
-table_name = os.getenv('DYNAMODB_TABLE', 'Todos')
+table_name = os.getenv('DYNAMODB_TABLE', 'Tarefas')
 table = dynamodb.Table(table_name)
 
+#--------------- Funções da tabela(CRUD) ---------------
 def obter_tarefas():
     try:
         response = table.scan()
