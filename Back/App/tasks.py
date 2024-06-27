@@ -4,9 +4,9 @@ from botocore.exceptions import ClientError
 import os
 import uuid
 
-# Configuração do DynamoDB
-dynamodb = boto3.resource('dynamodb', region_name='us-east-1')  # Substitua pelo seu AWS_REGION
-table_name = os.getenv('DYNAMODB_TABLE', 'Todos')
+# -------------- Configuração do DynamoDB --------------
+dynamodb = boto3.resource('dynamodb', region_name='Colocar minha Região aqui')  
+table_name = os.getenv('DYNAMODB_TABLE', 'Tarefas')
 table = dynamodb.Table(table_name)
 
 def obter_tarefas():
