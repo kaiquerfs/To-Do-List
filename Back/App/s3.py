@@ -1,8 +1,8 @@
 import boto3
 import os
 
-s3 = boto3.client('s3', region_name='us-east-1')  # Substitua pelo seu AWS_REGION
-bucket_name = os.getenv('S3_BUCKET_NAME')
+s3 = boto3.client('s3', region_name='Colocar a região do S3 Aqui')  
+bucket_name = os.getenv('Colocar nome do meu S3 depois')
 
 def fazer_upload_s3(file):
     file_key = file.filename
