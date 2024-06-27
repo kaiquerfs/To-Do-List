@@ -7,9 +7,9 @@ services:
     environment:
       - AWS_REGION=us-east-1
       - DYNAMODB_TABLE=tarefas
-      - S3_BUCKET_NAME=your-s3-bucket-name
-      - SQS_QUEUE_URL=your-sqs-queue-url
-      - FLASK_APP=App
+      - S3_BUCKET_NAME= Pendente de nome
+      - SQS_QUEUE_URL= Pendente de link(url)
+      - FLASK_APP=app
       - FLASK_ENV=development
     volumes:
       - .:/App
